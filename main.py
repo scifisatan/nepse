@@ -1,19 +1,29 @@
 import requests
-import lxml.html as lh
-
-
+from bs4 import BeautifulSoup
+headers = []
 url='https://merolagani.com/StockQuote.aspx'
-page = requests.get(url)
-doc = lh.fromstring(page.content)
-
-elements = doc.xpath('//*[@id="ctl00_ContentPlaceHolder1_divData"]/div[3]/table')
-
-data=""
-i=0
-
-for t in elements:
-    i+=1
-    name=t.text_content()
-    data= data+name
-
-print(data)
+soup = BeautifulSoup(requests.get(url).text,"html.parser")
+response = dict()
+for i in soup.find_all("th"):
+    headers.append(i.text.strip())
+row_value = soup.find_all("tr")
+for i in row_value:
+    dict1 = dict()
+    try:
+        name = i.find("a",{"tabindex":"-1"}).get("title").strip()
+        dict1.update({'Name':name})
+    except:
+        pass
+    data = i.find_all("td")
+    for n,j in enumerate(data):
+        if headers[n].strip() != "#":
+            key = headers[n]
+            value = data[n].text.strip()
+            dict1.update({key:value})
+    try:
+        symbol = dict1.get('Symbol')
+        dict1.pop('Symbol')
+        response.update({symbol:dict1})
+    except:
+        pass
+print(response)

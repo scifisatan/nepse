@@ -2,19 +2,12 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-headers = []
-response = dict()
+from flask import Flask
 
-def api(url):
-    soup = BeautifulSoup(requests.get(url).text,"html.parser")
-    for i in soup.find_all("th"):
-        headers.append(i.text.strip())
-    row_value
-import requests
-from bs4 import BeautifulSoup
-import json
 headers = []
 response = dict()
+app = Flask(__name__)
+url='https://www.sharesansar.com/today-share-price'
 
 def api(url):
     soup = BeautifulSoup(requests.get(url).text,"html.parser")
@@ -44,27 +37,10 @@ def api(url):
     json_response = json.dumps(response,indent=4)
     return json_response
 
- = soup.find_all("tr")
-    for i in row_value:
-        dict1 = dict()
+@app.route("/")
+@app.route("/home")
+def home():
+    return api(url)
 
-        data = i.find_all("td")
-        for n,j in enumerate(data):
-            if headers[n].strip() != "S.No":
-                key = headers[n]
-                value = data[n].text.strip()
-                dict1.update({key:value})
-            if headers[n].strip()=="Symbol":
-                name=data[n].find('a').get('title')
-                dict1.update({'Name':name})
-
-        try:
-            symbol = dict1.get('Symbol')
-            dict1.pop('Symbol')
-            response.update({symbol:dict1})
-        except:
-            pass
-
-    json_response = json.dumps(response,indent=4)
-    return json_response
-
+if __name__ == '__main__':
+    app.run(debug=True)

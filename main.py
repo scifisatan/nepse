@@ -1,7 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
+import json
 headers = []
-url='https://merolagani.com/StockQuote.aspx'
+url='https://www.sharesansar.com/today-share-price'
 soup = BeautifulSoup(requests.get(url).text,"html.parser")
 response = dict()
 for i in soup.find_all("th"):
@@ -9,21 +10,20 @@ for i in soup.find_all("th"):
 row_value = soup.find_all("tr")
 for i in row_value:
     dict1 = dict()
-    try:
-        name = i.find("a",{"tabindex":"-1"}).get("title").strip()
-        dict1.update({'Name':name})
-    except:
-        pass
     data = i.find_all("td")
     for n,j in enumerate(data):
-        if headers[n].strip() != "#":
+        if headers[n].strip() != "S.No":
             key = headers[n]
             value = data[n].text.strip()
             dict1.update({key:value})
+        if headers[n].strip()=="Symbol":
+            name=data[n].find('a').get('title')
+            dict1.update({'Name':name})
     try:
         symbol = dict1.get('Symbol')
         dict1.pop('Symbol')
         response.update({symbol:dict1})
     except:
         pass
-print(response)
+json_response = json.dumps(response,indent=4)
+print(json_response)

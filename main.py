@@ -4,36 +4,53 @@ from bs4 import BeautifulSoup
 import json
 from flask import Flask
 
-headers = []
-response = dict()
+
 app = Flask(__name__)
 url='https://www.sharesansar.com/today-share-price'
 
 def api(url):
-    soup = BeautifulSoup(requests.get(url).text,"html.parser")
-    for i in soup.find_all("th"):
-        headers.append(i.text.strip())
-    row_value = soup.find_all("tr")
-    for i in row_value:
-        dict1 = dict()
+    
+    header_list = []
+    response = dict()
+    dict1 = dict()
 
+    page = requests.get(url)
+    soup = BeautifulSoup(page.text,"html.parser")
+    head_value = soup.find_all("th")
+    row_value = soup.find_all("tr")
+    
+    for i in head_value:
+        head = i.text.strip().lower()
+        if head == 'conf.' :
+            head = 'conf'
+        elif head == 'trans.':
+            head = 'transfer'
+        elif head == 'diff %':
+            head = 'diff_per'
+        elif head == 'range %':
+            head = 'range_per'
+        elif head == 'vwap %':
+            head = 'vwap_per'      
+        header_list.append(head)
+  
+    for i in row_value:
         data = i.find_all("td")
         for n,j in enumerate(data):
-            if headers[n].strip() != "S.No":
-                key = headers[n]
+            if header_list[n].strip() != "s.no":
+                key = header_list[n]
                 value = data[n].text.strip()
                 dict1.update({key:value})
-            if headers[n].strip()=="Symbol":
+            if header_list[n].strip()=="symbol":
                 name=data[n].find('a').get('title')
-                dict1.update({'Name':name})
+                dict1.update({'name':name})
 
         try:
-            symbol = dict1.get('Symbol')
-            dict1.pop('Symbol')
+            symbol = dict1.get('symbol')
+            dict1.pop('symbol')
             response.update({symbol:dict1})
         except:
             pass
-
+        
     json_response = json.dumps(response,indent=4)
     return json_response
 
@@ -42,5 +59,14 @@ def api(url):
 def home():
     return api(url)
 
+@app.route("/symbols")
+def symbols():
+    return 'coming soon...'
+
+@app.route("/data")
+def data():
+    return api(url)
+    
+    
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

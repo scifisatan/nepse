@@ -83,7 +83,7 @@ li {
 
 
 .graph-container {
-  background: url("/nepseapi/images/background.jpg");
+  background: url("/static/images/background.jpg");
   padding-bottom: 15%;
   padding-top: 15%;
   margin-top: 5%;

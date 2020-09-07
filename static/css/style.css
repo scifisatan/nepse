@@ -9,6 +9,9 @@ body {
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content: center;
 }
 a {
   text-decoration: none;
@@ -20,37 +23,39 @@ a {
   position: relative;
   overflow: hidden;
   min-height: 50px;
-  height: 50px; 
+  height: 50px;
+  justify-content: center; 
 }
 
 .home {
-  margin: 6%;
-  margin-left: 26%;
-  padding: 1%;
+  padding: auto;
   padding-left: 1%;
   padding-right: 1%;
-  display: inline;
+  display: inline-flex;
   text-align: center;
+  margin-left: 17%;
+  margin-right: auto;
+  align-content: center;
 }
 
 .api {
-  margin: 6%;
   padding: 1%;
   padding-left: 1%;
   padding-right: 1%;
-  display: inline;
+  display: inline-flex;
   text-align: center;
-
+  margin-left: 20%;
+  margin-right: auto;
 }
 
 .symbol {
-  margin: 6%;
   padding: 1%;
   padding-left: 1%;
   padding-right: 1%;
-  display: inline;
+  display: inline-flex;
   text-align: center;
-
+  margin-left: 20%;
+  margin-right: auto;
 }
 
 
@@ -58,13 +63,11 @@ li {
   list-style: none;
   display: inline;
   position: relative;
-    text-align: center;
-
 }
 
 
 .graph-container {
-  background: url("/static/images/background.jpg");
+  background: url("/nepseapi/images/background.jpg");
   padding-bottom: 15%;
   padding-top: 15%;
   margin-top: 5%;
@@ -192,30 +195,27 @@ a:active.symbol {
 }
 
 
-@media only screen and (max-width:750px) {
+@media only screen and (max-width:760px) {
   .home {
-  margin-left: 35vh;
-  display: inline-table;
+  margin-left: 15%;
+  display: inline-flex;
   overflow: hidden;
   padding: 1.5%;
-  margin: 1%;
-  margin-left: 5vh;
+  margin-right: auto;
 }
 .api {
-  margin-left: 35vh;
-  display: inline-table;
+  margin-left: 10%;
+  display: inline-flex;
   overflow: hidden;
   padding: 1.5%;
-  margin: 1%;
-  margin-left: 5vh;
+  margin-right: auto;
 }
 .symbol {
-  margin-left: 35vh;
-  display: inline-table;
+  margin-right: auto;
+  display: inline-flex;
   overflow: hidden;
   padding: 1.5%;
-  margin: 1%;
-  margin-left: 5vh;
+  margin-left: 10%;
 }
 .dev1 {
   width: 25%;
@@ -240,26 +240,28 @@ a:active.symbol {
 }
 
 @media only screen and (max-width:520px) {
+
 .home {
-  display: block;
+  display: table;
   overflow: hidden;
-  padding: 1%;
-  margin: 1%;
-  margin-left: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 51%;
 }
 .api {
-  display: block;
+  display: table;
   overflow: hidden;
-  padding: 1%;
-  margin: 1%;
-  margin-left: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 46%;
 }
 .symbol {
-  display: block;
+  display: table;
   overflow: hidden;
-  padding: 1%;
-  margin: 1%;
-  margin-left: 30%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 47%;
+  
 
 }
 
@@ -286,4 +288,6 @@ a:hover.symbol {
   padding-bottom: 40%;
   padding-top: 40%;
 }
+
+
 }

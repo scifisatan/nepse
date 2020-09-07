@@ -57,7 +57,7 @@ def api(url):
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template(‘homepg.html’)
+    return render_template('homepg.html')
 
 @app.route("/symbols")
 def symbols():

@@ -9,10 +9,6 @@ body {
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
-  padding-right: 10%;
-  align-self: center;
-  text-align: center;
-  align-content: center;
 }
 a {
   text-decoration: none;
@@ -62,6 +58,8 @@ li {
   list-style: none;
   display: inline;
   position: relative;
+    text-align: center;
+
 }
 
 

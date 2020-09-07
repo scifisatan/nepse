@@ -9,6 +9,8 @@ body {
   width: 100%;
   padding-top: 2%;
   padding-bottom: 2%;
+  align-self: center;
+  text-align: center;
   align-content: center;
 }
 a {

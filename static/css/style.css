@@ -38,7 +38,6 @@ a {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
-
 }
 
 .symbol {
@@ -47,13 +46,13 @@ a {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
-
 }
 
 
 li {
   list-style: none;
   display: inline;
+  position: relative;
   text-align: center;
 }
 

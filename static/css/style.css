@@ -5,14 +5,15 @@ body {
  margin: 0;
 }
 .header {
- margin-top: 3%;
+ background: black;
+ width: 100%;
+ padding-top: 2%;
+ padding-bottom: 2%;
 }
 a {
  text-decoration: none;
  font-family: 'Segoe UI';
  color: white;
- border-radius: 100px;
- background: black;
  font-weight: 555;
  word-spacing: 2%;
  font-size: larger;

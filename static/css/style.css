@@ -56,7 +56,7 @@ li {
 
 
 .graph-container {
- background: url("/nepseapi/images/background.jpg");
+ background: url("/static/images/background.jpg");
  widows: 100vh;
  height: 100vh ;
  margin-top: 5%;

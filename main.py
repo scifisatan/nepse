@@ -2,7 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from flask import Flask
+from flask import Flask, render_template
 
 
 app = Flask(__name__)
@@ -57,7 +57,7 @@ def api(url):
 @app.route("/")
 @app.route("/home")
 def home():
-    return api(url)
+    return render_template(‘homepg.html’)
 
 @app.route("/symbols")
 def symbols():

@@ -1,0 +1,232 @@
+html {
+ scroll-behavior: smooth;
+}
+body {
+ margin: 0;
+}
+.header {
+ margin-top: 3%;
+}
+a {
+ text-decoration: none;
+ font-family: 'Segoe UI';
+ color: white;
+ border-radius: 100px;
+ background: black;
+ font-weight: 555;
+ word-spacing: 2%;
+ font-size: larger;
+ position: relative;
+ overflow: hidden;
+ min-height: 50px;
+ height: 50px; 
+}
+
+.home {
+ margin: 6%;
+ margin-left: 26%;
+ padding: 1%;
+ padding-left: 1%;
+ padding-right: 1%;
+ display: inline;
+}
+
+.api {
+ margin: 6%;
+ padding: 1%;
+ padding-left: 1%;
+ padding-right: 1%;
+ display: inline;
+}
+
+.symbol {
+ margin: 6%;
+ padding: 1%;
+ padding-left: 1%;
+ padding-right: 1%;
+ display: inline;
+}
+
+
+li {
+ list-style: none;
+ display: inline;
+ position: relative;
+}
+
+
+.graph-container {
+ background: url("/nepseapi/images/background.jpg");
+ widows: 100vh;
+ height: 100vh ;
+ margin-top: 5%;
+ color: white;
+ text-align: center;
+ font-family: 'Segoe UI';
+ font-size: larger;
+ background-attachment: fixed;
+}
+
+
+.about {
+ text-align: center;
+ color: #726F6F;
+ font-family: 'Segoe UI';
+ margin-top: 5%;
+ margin-bottom: 5%;
+}
+
+.darkgray-container {
+ width: 100%;
+ height: 50vh;
+ background: #474747;
+ margin-top: 5%;
+
+}
+
+
+.description {
+ text-align: center;
+ font-family: 'Segoe UI';
+ font-size: xx-large;
+ font-weight: 100;
+ color: white;
+ padding-top: 20vh;
+}
+
+
+.Developers {
+ font-family: 'Segoe UI';
+ font-weight: 555;
+ text-align: center;
+ color: #6E6E6E;
+ margin-top: 5%;
+ margin-bottom: 5%;
+}
+
+.dev1 {
+ width: 15%;
+ height: auto;
+ margin-top: 5%;
+}
+.dev2 {
+ width: 15%;
+ height: auto;
+ margin-top: 5%;
+
+}
+.dev3 {
+ width: 15%;
+ height: auto;
+ margin-top: 5%;
+ 
+}
+.gray-container {
+ width: 100%;
+ height: 100%;
+ background: black;
+ display: block;
+ text-align: center;
+ float: left;
+ margin: 0% ;
+ margin-top: 5%;
+ padding-bottom: 5%;
+}
+
+
+.dev1name {
+ color: white;
+ font-family: 'Segoe UI';
+ display: block;
+ font-size: medium;
+ font-weight: 555;
+
+}
+.dev2name {
+ color: white;
+ font-family: 'Segoe UI';
+ display: block;
+ font-size: medium;
+ font-weight: 555;
+}
+.dev3name {
+ color: white;
+ font-family: 'Segoe UI';
+ display: block;
+ font-size: medium;
+ font-weight: 555;
+}
+
+a:hover.home {
+ color: black;
+ background: white;
+}
+a:active.home {
+ color : #555555;
+ background:white;
+}a:hover.api {
+ color: black;
+ background: white;
+}
+a:active.api {
+ color : #555555;
+ background:white;
+}
+a:hover.symbol {
+ color: black;
+ background: white;
+}
+a:active.symbol {
+ color : #555555;
+ background:white;
+}
+
+
+@media only screen and (max-width:750px) {
+ .home {
+  margin: 6%;
+  margin-left: 3%;
+  padding: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline;
+ }
+ 
+ .api {
+  margin: 6%;
+  padding: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline;
+ }
+ 
+ .symbol {
+  margin: 6%;
+  padding: 2%;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline;
+ }
+ .dev1 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+ }
+ .dev2 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+ 
+ }
+ .dev3 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+  
+ }
+
+
+
+
+
+}

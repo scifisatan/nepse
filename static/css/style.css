@@ -30,6 +30,7 @@ a {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
+  text-align: center;
 }
 
 .api {
@@ -38,6 +39,8 @@ a {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
+  text-align: center;
+
 }
 
 .symbol {
@@ -46,6 +49,8 @@ a {
   padding-left: 1%;
   padding-right: 1%;
   display: inline;
+  text-align: center;
+
 }
 
 

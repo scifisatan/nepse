@@ -58,8 +58,8 @@ li {
 
 .graph-container {
   background: url("/static/images/background.jpg");
-  widows: 100vh;
-  height: 100vh ;
+  padding-bottom: 15%;
+  padding-top: 15%;
   margin-top: 5%;
   color: white;
   text-align: center;
@@ -75,15 +75,15 @@ li {
   text-align: center;
   color: #726F6F;
   font-family: 'Segoe UI';
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 4%;
+  margin-bottom: 8%;
 }
 
 .darkgray-container {
   width: 100%;
   height: 60vh;
   background: #474747;
-  margin-top: 5%;
+  margin-top: 8%;
 
 }
 
@@ -104,7 +104,7 @@ li {
   text-align: center;
   color: #6E6E6E;
   margin-top: 5%;
-  margin-bottom: 5%;
+  margin-bottom: 8%;
 }
 
 .dev1 {
@@ -269,6 +269,14 @@ a:hover.symbol {
   background: black;
 }
 .darkgray-container {
-  height: 70vh;
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-top: 8%;
+}
+.graph-container {
+  width: 100%;
+  height: 50%;
+  padding-bottom: 40%;
+  padding-top: 40%;
 }
 }

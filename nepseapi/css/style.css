@@ -1,0 +1,293 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+}
+.header {
+  background: black;
+  width: 100%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  padding-right: auto;
+  padding-left: auto;
+  justify-content: center;
+}
+a {
+  text-decoration: none;
+  font-family: 'Segoe UI';
+  color: white;
+  font-weight: 555;
+  word-spacing: 2%;
+  font-size: larger;
+  position: relative;
+  overflow: hidden;
+  min-height: 50px;
+  height: 50px;
+  justify-content: center; 
+}
+
+.home {
+  padding: auto;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline-flex;
+  text-align: center;
+  margin-left: 17%;
+  margin-right: auto;
+  align-content: center;
+}
+
+.api {
+  padding: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline-flex;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: auto;
+}
+
+.symbol {
+  padding: 1%;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: inline-flex;
+  text-align: center;
+  margin-left: 20%;
+  margin-right: auto;
+}
+
+
+li {
+  list-style: none;
+  display: inline;
+  position: relative;
+}
+
+
+.graph-container {
+  background: url("/nepseapi/images/background.jpg");
+  padding-bottom: 15%;
+  padding-top: 15%;
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-size: larger;
+  background-attachment: fixed;
+  overflow: hidden;
+  background-repeat: no-repeat;
+}
+
+
+.about {
+  text-align: center;
+  color: #726F6F;
+  font-family: 'Segoe UI';
+  margin-top: 4%;
+  margin-bottom: 8%;
+}
+
+.darkgray-container {
+  width: 100%;
+  height: 60vh;
+  background: #474747;
+  margin-top: 8%;
+
+}
+
+
+.description {
+  text-align: center;
+  font-family: 'Segoe UI';
+  font-size: xx-large;
+  font-weight: 100;
+  color: white;
+  padding-top: 20vh;
+}
+
+
+.Developers {
+  font-family: 'Segoe UI';
+  font-weight: 555;
+  text-align: center;
+  color: #6E6E6E;
+  margin-top: 5%;
+  margin-bottom: 8%;
+}
+
+.dev1 {
+  width: 15%;
+  height: auto;
+  margin-top: 5%;
+}
+.dev2 {
+  width: 15%;
+  height: auto;
+  margin-top: 5%;
+
+}
+.dev3 {
+  width: 15%;
+  height: auto;
+  margin-top: 5%;
+  
+}
+.gray-container {
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: block;
+  text-align: center;
+  float: left;
+  margin: 0% ;
+  margin-top: 5%;
+  padding-bottom: 5%;
+}
+
+
+.dev1name {
+  color: white;
+  font-family: 'Segoe UI';
+  display: block;
+  font-size: medium;
+  font-weight: 555;
+
+}
+.dev2name {
+  color: white;
+  font-family: 'Segoe UI';
+  display: block;
+  font-size: medium;
+  font-weight: 555;
+}
+.dev3name {
+  color: white;
+  font-family: 'Segoe UI';
+  display: block;
+  font-size: medium;
+  font-weight: 555;
+}
+
+a:hover.home {
+  color: black;
+  background: white;
+}
+a:active.home {
+  color : #555555;
+  background:white;
+}a:hover.api {
+  color: black;
+  background: white;
+}
+a:active.api {
+  color : #555555;
+  background:white;
+}
+a:hover.symbol {
+  color: black;
+  background: white;
+}
+a:active.symbol {
+  color : #555555;
+  background:white;
+}
+
+
+@media only screen and (max-width:760px) {
+  .home {
+  margin-left: 15%;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 1.5%;
+  margin-right: auto;
+}
+.api {
+  margin-left: 10%;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 1.5%;
+  margin-right: auto;
+}
+.symbol {
+  margin-right: auto;
+  display: inline-flex;
+  overflow: hidden;
+  padding: 1.5%;
+  margin-left: 10%;
+}
+.dev1 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+}
+.dev2 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+}
+.dev3 {
+  width: 25%;
+  height: auto;
+  margin-top: 5%;
+}
+
+
+
+
+
+}
+
+@media only screen and (max-width:520px) {
+
+.home {
+  display: table;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 51%;
+}
+.api {
+  display: table;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 46%;
+}
+.symbol {
+  display: table;
+  overflow: hidden;
+  text-align: center;
+  margin-left: auto;
+  margin-right: 47%;
+  
+
+}
+
+a:hover.api {
+  color: #ff8282;
+  background: black;
+}
+a:hover.home {
+  color: #ff8282;
+  background: black;
+  }
+a:hover.symbol {
+  color: #ff8282;
+  background: black;
+}
+.darkgray-container {
+  padding-top: 4%;
+  padding-bottom: 4%;
+  margin-top: 8%;
+}
+.graph-container {
+  width: 100%;
+  height: 50%;
+  padding-bottom: 40%;
+  padding-top: 40%;
+}
+
+
+}

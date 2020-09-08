@@ -32,10 +32,10 @@ def todaysPrice(url):
         for n,j in enumerate(data):
             if header_list[n].strip() != "s.no":
                 key = header_list[n]
-                value = data[n].text.strip()
+                value = j.text.strip()
                 dict1.update({key:value})
             if header_list[n].strip()=="symbol":
-                name=data[n].find('a').get('title')
+                name=j.find('a').get('title')
                 dict1.update({'name':name})
 
         try:

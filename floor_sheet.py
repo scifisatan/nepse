@@ -1,9 +1,9 @@
-
+import requests
+from bs4 import BeautifulSoup
+import json
 
 def floorSheet(url):
-    import requests
-    from bs4 import BeautifulSoup
-    import json
+
    
     page = requests.get(url)
     soup = BeautifulSoup(page.text,"html.parser")

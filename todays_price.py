@@ -6,7 +6,6 @@ def todaysPrice(url):
 
     header_list = []
     response = dict()
-    dict1 = dict()
 
     page = requests.get(url)
     soup = BeautifulSoup(page.text,"html.parser")
@@ -28,6 +27,7 @@ def todaysPrice(url):
         header_list.append(head)
   
     for i in row_value:
+        dict1 = dict()
         data = i.find_all("td")
         for n,j in enumerate(data):
             if header_list[n].strip() != "s.no":

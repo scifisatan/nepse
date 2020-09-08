@@ -10,6 +10,7 @@ url1 = 'https://www.sharesansar.com/today-share-price'
 url2 = 'http://www.nepalstock.com/main/floorsheet/index/1/?contract-no=&stock-symbol=&buyer=&seller=&_limit=10000'
 
 
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -22,7 +23,6 @@ def fs():
 @app.route("/todays_price")
 def tp():
     return todaysPrice(url1)
-    
     
 if __name__ == '__main__':
     app.run()

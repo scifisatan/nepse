@@ -36,6 +36,7 @@ a {
   margin-left: 17%;
   margin-right: auto;
   align-content: center;
+  font-size: medium;
 }
 
 .api {
@@ -46,6 +47,7 @@ a {
   text-align: center;
   margin-left: 20%;
   margin-right: auto;
+  font-size: medium;
 }
 
 .symbol {
@@ -54,6 +56,7 @@ a {
   padding-right: 1%;
   display: inline-flex;
   text-align: center;
+  font-size: medium;
   margin-left: 20%;
   margin-right: auto;
 }
@@ -176,13 +179,14 @@ a:active.symbol {
 }
 
 
-@media only screen and (max-width:760px) {
+@media only screen and (max-width:800px) {
   .home {
   margin-left: 15%;
   display: inline-flex;
   overflow: hidden;
   padding: 1.5%;
   margin-right: auto;
+  font-size: medium;
 }
 .api {
   margin-left: 10%;
@@ -190,11 +194,13 @@ a:active.symbol {
   overflow: hidden;
   padding: 1.5%;
   margin-right: auto;
+  font-size: medium;
 }
 .symbol {
   margin-right: auto;
   display: inline-flex;
   overflow: hidden;
+  font-size: medium;
   padding: 1.5%;
   margin-left: 10%;
 }
@@ -211,7 +217,7 @@ a:active.symbol {
 
 }
 
-@media only screen and (max-width:520px) {
+@media only screen and (max-width:560px) {
 
 .home {
   display: table;
@@ -219,20 +225,23 @@ a:active.symbol {
   text-align: center;
   margin-left: auto;
   margin-right: 50%;
+  font-size: medium;
 }
 .api {
   display: table;
   overflow: hidden;
   text-align: center;
   margin-left: auto;
-  margin-right: 44%;
+  margin-right: 40%;
+  font-size: medium;
 }
 .symbol {
   display: table;
   overflow: hidden;
   text-align: center;
+  font-size: medium;
   margin-left: auto;
-  margin-right: 45%;
+  margin-right: 38%;
   
 
 }

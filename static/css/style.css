@@ -179,7 +179,7 @@ a:active.symbol {
 }
 
 
-@media only screen and (max-width:800px) {
+@media only screen and (max-width:900px) {
   .home {
   margin-left: 15%;
   display: inline-flex;
@@ -217,7 +217,7 @@ a:active.symbol {
 
 }
 
-@media only screen and (max-width:560px) {
+@media only screen and (max-width:600px) {
 
 .home {
   display: table;
